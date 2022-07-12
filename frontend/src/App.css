@@ -1,0 +1,35 @@
+html {
+  height: 100%;
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  overflow: auto;
+  transition: all 0.5s;
+  background-color: var(--background-primary);
+}
+
+:root {
+  --background-primary: #e7e7e7;
+  --background-secondary: #fffdf6;
+  --background-inverse: #979795;
+  --text-primary: #424242;
+  --text-secondary: #424242;
+}
+
+[data-theme="Dark"] {
+  --background-primary: #2f2e2e;
+  --background-secondary: #979795;
+  --background-inverse: #fffdf6;
+  --text-primary: #2f2e2e;
+  --text-secondary: #fffdf6;
+}

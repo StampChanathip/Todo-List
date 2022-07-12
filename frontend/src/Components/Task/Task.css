@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task-box {
+  display: grid;
+  width: 750px;
+  height: 75px;
+  grid-template-columns: 100px 250px 200px 100px 100px;
+  grid-row-gap: 0;
+  background: var(--background-secondary);
+}
+
+.task-title {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.5rem;
+  font-family: "Kanit";
+  color: var(--text-primary);
+}
+.task-title-done {
+  display: flex;
+  align-items: center;
+  text-decoration: line-through;
+
+  font-size: 1.5rem;
+  font-family: "Kanit";
+  color: var(--text-primary);
+}
+
+.task-checkbox {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 1.5rem;
+  border: 2px;
+}
+
+.task-due {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  margin-right: 10px;
+
+  font-size: 1.2rem;
+  font-family: "Kanit";
+  color: var(--text-primary);
+}
+
+.task-edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: #789fcc;
+
+  font-size: 1.5rem;
+  font-family: "Kanit";
+  color: #424242;
+}
+
+.task-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: #f96464;
+
+  font-size: 1.5rem;
+  font-family: "Kanit";
+  color: #424242;
+}

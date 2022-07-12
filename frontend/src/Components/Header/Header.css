@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+.header-box {
+  display: flex;
+  width: 500px;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+
+  color: var(--text-secondary);
+  font-family: "Kanit";
+  font-size: 1.5rem;
+  background: var(--background-secondary);
+  border-radius: 25px;
+}
+
+.header {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
