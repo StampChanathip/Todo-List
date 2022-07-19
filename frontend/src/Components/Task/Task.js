@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import EditButton from "../EditButton/EditButton";
 import "./Task.css";
+import moment from "moment";
 
 function Task(props) {
   const [done, setDone] = useState(props.done);
@@ -9,7 +10,7 @@ function Task(props) {
   function deleteClicked() {
     fetch(url, {
       method: "DELETE",
-    }).then(() => props.setUpdated(!props.updated));
+    });
   }
 
   function handleCheck(e) {
@@ -20,7 +21,6 @@ function Task(props) {
         done: e.target.checked,
       }),
     }).then(() => {
-      props.setUpdated(!props.updated);
       setDone(e.target.checked);
     });
   }
@@ -39,7 +39,9 @@ function Task(props) {
         <div className={"task-title" + (done ? "-done" : "")}>
           {props.title}
         </div>
-        <div className="task-due">Due Date: {props.date}</div>
+        <div className="task-due">
+          Due Date: {moment(props.date).format("DD MMM YYYY")}
+        </div>
         <EditButton
           title={props.title}
           detail={props.detail}

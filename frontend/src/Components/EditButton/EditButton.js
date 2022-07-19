@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Popup from "reactjs-popup";
 import "./EditButton.css";
+import DatePicker from "react-datepicker";
 
 function EditButton(props) {
   const [title, setTitle] = useState(props.title);
@@ -47,14 +48,14 @@ function EditButton(props) {
           </div>
           <div className="box">
             <p>Due Date: </p>
-            <input
-              type="date"
-              defaultValue={date}
-              className="input-box"
-              onChange={(e) => {
-                setDate(e.target.value);
-              }}
-            ></input>
+            <div>
+              <DatePicker
+                className="input-box"
+                selected={Date.parse(date)}
+                onChange={(date) => setDate(date)}
+                dateFormat="dd/MM/yyyy"
+              />
+            </div>
           </div>
           <p>Note: </p>
           <textarea

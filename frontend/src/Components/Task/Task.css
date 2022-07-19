@@ -9,7 +9,7 @@
   display: grid;
   width: 750px;
   height: 75px;
-  grid-template-columns: 100px 250px 200px 100px 100px;
+  grid-template-columns: 80px 250px 220px 100px 100px;
   grid-row-gap: 0;
   background: var(--background-secondary);
 }
@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
 
-  font-size: 1.5rem;
+  font-size: 24px;
   font-family: "Kanit";
   color: var(--text-primary);
 }
@@ -27,7 +27,7 @@
   align-items: center;
   text-decoration: line-through;
 
-  font-size: 1.5rem;
+  font-size: 24px;
   font-family: "Kanit";
   color: var(--text-primary);
 }
@@ -35,17 +35,17 @@
 .task-checkbox {
   margin-left: 15px;
   margin-right: 15px;
-  width: 1.5rem;
+  width: 25px;
   border: 2px;
 }
 
 .task-due {
   display: flex;
-  width: 200px;
+  width: 220px;
   align-items: center;
   margin-right: 10px;
 
-  font-size: 1.2rem;
+  font-size: 20px;
   font-family: "Kanit";
   color: var(--text-primary);
 }
@@ -59,9 +59,9 @@
   cursor: pointer;
   background-color: #789fcc;
 
-  font-size: 1.5rem;
+  font-size: 24px;
   font-family: "Kanit";
-  color: #424242;
+  color: var(--text-primary);
 }
 
 .task-delete {
@@ -73,7 +73,7 @@
   cursor: pointer;
   background-color: #f96464;
 
-  font-size: 1.5rem;
+  font-size: 24px;
   font-family: "Kanit";
-  color: #424242;
+  color: var(--text-primary);
 }

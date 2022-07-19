@@ -3,14 +3,13 @@ import Task from "../Task/Task";
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
-  const [updated, setUpdated] = useState(false);
   const url = "http://localhost:8000/api/todo";
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((res) => setTasks(res));
-  }, [updated]);
+  });
   return (
     <div>
       {tasks
@@ -24,8 +23,6 @@ function TaskList() {
             date={task.date}
             detail={task.detail}
             done={task.done}
-            updated={updated}
-            setUpdated={setUpdated}
           />
         ))}
     </div>

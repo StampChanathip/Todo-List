@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./AddTask.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-function AddTask(props) {
+function AddTask() {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState(new Date());
   const url = "http://localhost:8000/api/todo";
@@ -29,8 +31,8 @@ function AddTask(props) {
       >
         <input
           type="text"
-          className="addTask-box"
-          value={title}
+          className="addTask-input"
+          maxLength={15}
           onChange={(e) => {
             setTitle(e.target.value);
           }}
@@ -38,15 +40,15 @@ function AddTask(props) {
           required
         />
         <div className="addTask-label">Due date:</div>
-        <input
-          className="addTask-date"
-          type="date"
-          name="date"
-          onChange={(e) => {
-            setDate(e.target.value);
-          }}
-          required
-        />
+        <div>
+          <DatePicker
+            className="addTask-date"
+            selected={date}
+            onChange={(date) => setDate(date)}
+            dateFormat="dd/MM/yyyy"
+          />
+        </div>
+
         <input className="addTask-submit" type="submit" />
       </form>
     </div>
